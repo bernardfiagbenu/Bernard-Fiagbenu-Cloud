@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Sun,
-  Moon
+  Moon,
+  Github,
+  Linkedin,
+  Twitter
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Chatbot from '../components/Chatbot';
@@ -94,7 +97,7 @@ export default function Home() {
               Welcome.
             </span>
             <span className="text-2xl md:text-4xl lg:text-5xl font-medium text-gray-500 dark:text-gray-400 tracking-tight max-w-3xl mt-2 md:mt-4 transition-colors duration-500">
-              <span className="text-gray-900 dark:text-white font-bold">Bernard Fiagbenu's</span> Cloud
+              <span className="text-gray-900 dark:text-white font-bold uppercase">Bernard Fiagbenu's</span> <span className="uppercase">Cloud</span>
             </span>
           </h1>
           
@@ -104,6 +107,7 @@ export default function Home() {
             <a href="#lab" className="whitespace-nowrap px-6 py-3 rounded-full bg-[#D6FFEB] dark:bg-emerald-900/40 border border-emerald-100 dark:border-emerald-800/50 hover:border-emerald-200 dark:hover:border-emerald-700 text-emerald-900 dark:text-emerald-100 text-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5">Innovation Lab</a>
             <a href="#apps" className="whitespace-nowrap px-6 py-3 rounded-full bg-[#FFF8D6] dark:bg-yellow-900/40 border border-yellow-100 dark:border-yellow-800/50 hover:border-yellow-200 dark:hover:border-yellow-700 text-yellow-900 dark:text-yellow-100 text-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5">Software Tools</a>
             <a href="#community" className="whitespace-nowrap px-6 py-3 rounded-full bg-[#D6EFFF] dark:bg-blue-900/40 border border-blue-100 dark:border-blue-800/50 hover:border-blue-200 dark:hover:border-blue-700 text-blue-900 dark:text-blue-100 text-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5">Community</a>
+            <Link to="/blog" className="whitespace-nowrap px-6 py-3 rounded-full bg-[#FFE2EC] dark:bg-pink-900/40 border border-pink-100 dark:border-pink-800/50 hover:border-pink-200 dark:hover:border-pink-700 text-pink-900 dark:text-pink-100 text-sm font-bold transition-all hover:shadow-md hover:-translate-y-0.5">Blog</Link>
           </div>
         </header>
 
@@ -283,12 +287,27 @@ export default function Home() {
         </div>
         
         {/* Footer with Legal Links */}
-        <footer className="mt-20 border-t border-gray-200 dark:border-gray-800 pt-8 pb-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400 transition-colors duration-500">
-          <p>&copy; {new Date().getFullYear()} Bernard Fiagbenu. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link to="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">Contact Us</Link>
-            <Link to="/terms" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms & Conditions</Link>
-            <Link to="/privacy" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</Link>
+        <footer className="mt-20 border-t border-gray-200 dark:border-gray-800 pt-8 pb-12 flex flex-col items-center gap-8 transition-colors duration-500">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 text-sm text-gray-500 dark:text-gray-400">
+            <p>&copy; {new Date().getFullYear()} BERNARD FIAGBENU. All rights reserved.</p>
+            <div className="flex items-center gap-6">
+              <Link to="/blog" className="hover:text-gray-900 dark:hover:text-white transition-colors">Blog</Link>
+              <Link to="/contact" className="hover:text-gray-900 dark:hover:text-white transition-colors">Contact Us</Link>
+              <Link to="/terms" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms & Conditions</Link>
+              <Link to="/privacy" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</Link>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all hover:-translate-y-1" aria-label="LinkedIn">
+              <Linkedin size={20} />
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-all hover:-translate-y-1" aria-label="GitHub">
+              <Github size={20} />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-500 dark:hover:text-blue-400 transition-all hover:-translate-y-1" aria-label="Twitter">
+              <Twitter size={20} />
+            </a>
           </div>
         </footer>
         

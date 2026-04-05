@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Welcome to Bernard Fiagbenu's Cloud. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+              Welcome to BERNARD FIAGBENU'S CLOUD. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
             </p>
           </section>
 

@@ -1,7 +1,5 @@
 {
   "name": "Bernard Fiagbenu | Official Site",
   "description": "The official website of Bernard Fiagbenu, Computer Scientist. Explore my works, research, software tools, and innovation lab.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
+  "requestFramePermissions": []
 }

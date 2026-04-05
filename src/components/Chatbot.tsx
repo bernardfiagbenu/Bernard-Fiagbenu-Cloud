@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Mic, Globe, Brain, Square, Loader2 } from 'lucide-react';
+import { MessageSquare, X, Send, Globe, Brain, Loader2 } from 'lucide-react';
 import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import Markdown from 'react-markdown';
 
@@ -28,10 +28,7 @@ export default function Chatbot() {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isRecording, setIsRecording] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const audioChunksRef = useRef<Blob[]>([]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -41,10 +38,10 @@ export default function Chatbot() {
     scrollToBottom();
   }, [messages]);
 
-  const handleSend = async (text: string, audioBase64?: string, audioMimeType?: string) => {
-    if (!text.trim() && !audioBase64) return;
+  const handleSend = async (text: string) => {
+    if (!text.trim()) return;
 
-    const newUserMsg: Message = { role: 'user', text: text || '🎤 Audio Message' };
+    const newUserMsg: Message = { role: 'user', text };
     setMessages(prev => [...prev, newUserMsg]);
     setInput('');
     setIsLoading(true);
@@ -68,19 +65,7 @@ export default function Chatbot() {
         parts: [{ text: m.text }]
       }));
       
-      const currentParts: any[] = [];
-      if (text) currentParts.push({ text });
-      if (audioBase64 && audioMimeType) {
-         currentParts.push({
-           inlineData: {
-             data: audioBase64,
-             mimeType: audioMimeType
-           }
-         });
-         if (!text) {
-           currentParts.push({ text: "Please transcribe this audio and respond to it." });
-         }
-      }
+      const currentParts: any[] = [{ text }];
 
       const response = await ai.models.generateContent({
         model: modelName,
@@ -108,41 +93,6 @@ export default function Chatbot() {
       setMessages(prev => [...prev, { role: 'model', text: 'Sorry, an error occurred while processing your request.' }]);
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const toggleRecording = async () => {
-    if (isRecording) {
-      mediaRecorderRef.current?.stop();
-      setIsRecording(false);
-    } else {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        const mediaRecorder = new MediaRecorder(stream);
-        mediaRecorderRef.current = mediaRecorder;
-        audioChunksRef.current = [];
-
-        mediaRecorder.ondataavailable = (e) => {
-          if (e.data.size > 0) audioChunksRef.current.push(e.data);
-        };
-
-        mediaRecorder.onstop = async () => {
-          const audioBlob = new Blob(audioChunksRef.current, { type: mediaRecorder.mimeType });
-          const reader = new FileReader();
-          reader.readAsDataURL(audioBlob);
-          reader.onloadend = () => {
-            const base64data = (reader.result as string).split(',')[1];
-            handleSend('', base64data, mediaRecorder.mimeType);
-          };
-          stream.getTracks().forEach(track => track.stop());
-        };
-
-        mediaRecorder.start();
-        setIsRecording(true);
-      } catch (err) {
-        console.error("Error accessing microphone:", err);
-        alert("Could not access microphone.");
-      }
     }
   };
 
@@ -212,13 +162,6 @@ export default function Chatbot() {
           {/* Input Area */}
           <div className="p-4 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
             <div className="flex items-end gap-2 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-200 dark:border-gray-700 p-1.5 focus-within:border-gray-400 dark:focus-within:border-gray-500 focus-within:ring-1 focus-within:ring-gray-400 dark:focus-within:ring-gray-500 transition-all shadow-sm">
-              <button 
-                onClick={toggleRecording}
-                className={`p-2.5 rounded-full flex-shrink-0 transition-colors ${isRecording ? 'bg-[#FFE2EC] dark:bg-pink-900/40 text-pink-600 dark:text-pink-400 animate-pulse' : 'text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'}`}
-                title={isRecording ? "Stop recording" : "Record audio"}
-              >
-                {isRecording ? <Square size={18} /> : <Mic size={18} />}
-              </button>
               <textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -228,14 +171,13 @@ export default function Chatbot() {
                     handleSend(input);
                   }
                 }}
-                placeholder={isRecording ? "Recording..." : "Type a message..."}
+                placeholder="Type a message..."
                 className="flex-1 bg-transparent border-none focus:ring-0 resize-none max-h-32 min-h-[44px] py-2.5 px-2 text-sm text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 font-medium"
                 rows={1}
-                disabled={isRecording}
               />
               <button 
                 onClick={() => handleSend(input)}
-                disabled={(!input.trim() && !isRecording) || isLoading}
+                disabled={!input.trim() || isLoading}
                 className="p-2.5 rounded-full bg-gray-900 dark:bg-indigo-600 text-white flex-shrink-0 hover:bg-gray-800 dark:hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors mb-0.5 mr-0.5 shadow-md"
               >
                 <Send size={16} className="ml-0.5" />

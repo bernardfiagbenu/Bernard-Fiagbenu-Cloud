@@ -26,7 +26,7 @@ export default function TermsAndConditions() {
           <section>
             <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              By accessing and using Bernard Fiagbenu's Cloud, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
+              By accessing and using BERNARD FIAGBENU'S CLOUD, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you must not use our website.
             </p>
           </section>
 
