@@ -21,8 +21,13 @@ export default defineConfig(({mode}) => {
       hmr: process.env.DISABLE_HMR !== 'true',
     },
     build: {
+      outDir: 'dist',
+      emptyOutDir: true,
       chunkSizeWarningLimit: 1500,
       rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+        },
         output: {
           manualChunks: {
             vendor: ['react', 'react-dom', 'lucide-react', 'react-markdown', '@google/genai'],
