@@ -28,6 +28,12 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  @media (max-width: 768px) {
+    .floating {
+      animation: float-mobile 6s ease-in-out infinite;
+    }
+  }
+
   .bg-grid {
     background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px);
     background-size: 50px 50px;
@@ -67,6 +73,11 @@
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0) scale(1); }
   50% { transform: translateY(-25px) rotate(8deg) scale(1.08); }
+}
+
+@keyframes float-mobile {
+  0%, 100% { transform: translateY(0) rotate(0) scale(1); }
+  50% { transform: translateY(-10px) rotate(3deg) scale(1.03); }
 }
 
 @keyframes shine {
