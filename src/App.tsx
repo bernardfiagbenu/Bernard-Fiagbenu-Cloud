@@ -93,114 +93,174 @@ export default function App() {
         <div className="perspective-container relative w-full mt-2 md:mt-4">
           <div ref={dashboardRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr dashboard-3d bg-white/40 dark:bg-gray-900/40 p-6 md:p-10 rounded-[3rem] border border-white/60 dark:border-gray-700/50 backdrop-blur-xl transition-colors duration-500">
             {/* 1. Portfolio */}
-            <div id="portfolio" className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px]">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-0.5s' }}>
+            <a 
+              href="https://portfolio.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="portfolio" 
+              className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px] group/card"
+            >
+              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-0.5s' }}>
                 <img src="/images/portfolio.jpg" alt="Portfolio" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 transition-colors">My Works</h3>
-              <p className="text-lg text-gray-700 dark:text-gray-300 font-medium transition-colors">Portfolio</p>
-            </div>
-          </div>
+              <div className="mt-12">
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 transition-colors">My Works</h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 font-medium transition-colors">Portfolio</p>
+              </div>
+            </a>
 
             {/* 2. Business */}
-            <div id="business" className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-1.2s' }}>
+            <a 
+              href="https://business.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="business" 
+              className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-1.2s' }}>
                 <img src="/images/business.jpg" alt="Business" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Corporate Activities</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Business</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Corporate Activities</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Business</p>
+              </div>
+            </a>
 
             {/* 3. Training */}
-            <div id="training" className="col-span-1 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-3.5s' }}>
+            <a 
+              href="https://training.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="training" 
+              className="col-span-1 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-3.5s' }}>
                 <img src="/images/develop skills training.jpg" alt="Training" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Develop Your Skills</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Training</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Develop Your Skills</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Training</p>
+              </div>
+            </a>
 
             {/* 4. Lab */}
-            <div id="lab" className="col-span-1 lg:row-span-2 bg-[#D6FFEB] dark:bg-emerald-900/20 dark:border dark:border-emerald-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-emerald-500/20 cursor-pointer min-h-[240px]">
-              <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-2.1s' }}>
+            <a 
+              href="https://lab.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="lab" 
+              className="col-span-1 lg:row-span-2 bg-[#D6FFEB] dark:bg-emerald-900/20 dark:border dark:border-emerald-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-emerald-500/20 cursor-pointer min-h-[240px] group/card"
+            >
+              <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-2.1s' }}>
                 <img src="/images/lab.jpg" alt="Lab" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Track Innovation</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Lab</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Track Innovation</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Lab</p>
+              </div>
+            </a>
 
             {/* 5. Academy */}
-            <div id="academy" className="col-span-1 bg-[#FFE8D6] dark:bg-orange-900/20 dark:border dark:border-orange-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-orange-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-4.8s' }}>
+            <a 
+              href="https://academy.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="academy" 
+              className="col-span-1 bg-[#FFE8D6] dark:bg-orange-900/20 dark:border dark:border-orange-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-orange-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-4.8s' }}>
                 <img src="/images/academy.jpg" alt="Academy" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Structured Learning</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Academy</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Structured Learning</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Academy</p>
+              </div>
+            </a>
 
             {/* 6. Research */}
-            <div id="research" className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-0.8s' }}>
+            <a 
+              href="https://research.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="research" 
+              className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-0.8s' }}>
                 <img src="/images/research.jpg" alt="Research" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Research & Findings</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Research</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Research & Findings</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Research</p>
+              </div>
+            </a>
 
             {/* 7. Services */}
-            <div id="services" className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-5.5s' }}>
+            <a 
+              href="https://services.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="services" 
+              className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-5.5s' }}>
                 <img src="/images/consulting.jpg" alt="Consulting" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Consulting & Offers</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Services</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Consulting & Offers</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Services</p>
+              </div>
+            </a>
 
             {/* 8. Projects */}
-            <div id="projects" className="col-span-1 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px]">
-              <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-1.9s' }}>
+            <a 
+              href="https://projects.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="projects" 
+              className="col-span-1 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px] group/card"
+            >
+              <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-1.9s' }}>
                 <img src="/images/project.jpg" alt="Projects" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Active Initiatives</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Projects</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Active Initiatives</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Projects</p>
+              </div>
+            </a>
 
             {/* 9. Apps */}
-            <div id="apps" className="col-span-1 md:col-span-2 lg:col-span-2 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 md:p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-3.1s' }}>
+            <a 
+              href="https://apps.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="apps" 
+              className="col-span-1 md:col-span-2 lg:col-span-2 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 md:p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-3.1s' }}>
                 <img src="/images/software tools.jpg" alt="Software Tools" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
-            <div className="mt-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Software Tools</h3>
-              <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Apps</p>
-            </div>
-          </div>
+              <div className="mt-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Software Tools</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Apps</p>
+              </div>
+            </a>
 
             {/* 10. Community */}
-            <div id="community" className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px]">
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating" style={{ animationDelay: '-6.2s' }}>
+            <a 
+              href="https://community.bernardfiagbenu.cloud" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              id="community" 
+              className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px] group/card"
+            >
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-6.2s' }}>
                 <img src="/images/community.jpg" alt="Community" className="w-full h-full object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
               </div>
               <div className="mt-8">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Connect & Network</h3>
                 <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Community</p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
