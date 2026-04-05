@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .perspective-container {
+    perspective: 2000px;
+  }
+
+  .dashboard-3d {
+    box-shadow: -40px 60px 120px -20px rgba(0, 0, 0, 0.1), 
+                0 10px 20px -5px rgba(0, 0, 0, 0.03);
+    transition: transform 0.15s ease-out, box-shadow 0.5s ease;
+  }
+
+  .dark .dashboard-3d {
+    box-shadow: -40px 60px 120px -20px rgba(0, 0, 0, 0.6), 
+                0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .bg-grid {
+    background-image: radial-gradient(circle, #cbd5e1 1.5px, transparent 1.5px);
+    background-size: 50px 50px;
+  }
+
+  .dark .bg-grid {
+    background-image: radial-gradient(circle, #334155 1.5px, transparent 1.5px);
+  }
+
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+  }
+}
+
+/* Globally hide scrollbars but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0) scale(1); }
+  50% { transform: translateY(-25px) rotate(8deg) scale(1.08); }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
