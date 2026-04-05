@@ -6,17 +6,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Sun,
-  Moon,
-  MonitorPlay,
-  Building2,
-  Target,
-  FlaskConical,
-  GraduationCap,
-  Microscope,
-  Handshake,
-  FolderKanban,
-  Code2,
-  Users
+  Moon
 } from 'lucide-react';
 import Chatbot from './components/Chatbot';
 import LegalModal from './components/LegalModal';

@@ -67,7 +67,6 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
               <ul>
                 <li><strong>Usage Data:</strong> We may collect information on how the Website is accessed and used.</li>
                 <li><strong>Microphone Data:</strong> If you use the voice feature of our AI assistant, we request access to your microphone. Audio data is processed in real-time for transcription purposes and is not permanently stored by us.</li>
-                <li><strong>Location Data:</strong> If you use the maps feature of our AI assistant, we may request your geolocation to provide accurate, location-based responses.</li>
               </ul>
 
               <h3>2. How We Use Your Information</h3>
@@ -83,7 +82,7 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
 
               <h3>3. Third-Party Services</h3>
               <p>
-                We use third-party services, specifically Google Gemini API, to power our AI assistant. When you interact with the chatbot, your text, audio, and location inputs may be processed by Google's servers in accordance with their privacy policies.
+                We use third-party services, specifically Google Gemini API, to power our AI assistant. When you interact with the chatbot, your text and audio inputs may be processed by Google's servers in accordance with their privacy policies.
               </p>
 
               <h3>4. Data Security</h3>

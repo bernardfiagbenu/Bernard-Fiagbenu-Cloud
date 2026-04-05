@@ -3,8 +3,14 @@ import { MessageSquare, X, Send, Mic, Globe, Brain, Square, Loader2 } from 'luci
 import { GoogleGenAI, ThinkingLevel } from '@google/genai';
 import Markdown from 'react-markdown';
 
-// Initialize Gemini API
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// Initialize Gemini API lazily to prevent crash if key is missing
+const getAI = () => {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    throw new Error('Gemini API key is missing. Please set GEMINI_API_KEY in your environment.');
+  }
+  return new GoogleGenAI({ apiKey });
+};
 
 type Mode = 'general' | 'search' | 'think';
 
@@ -44,6 +50,7 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
+      const ai = getAI();
       let modelName = 'gemini-3-flash-preview';
       let config: any = {
         systemInstruction: "You are an AI assistant on the official portfolio website of Bernard Fiagbenu, a Computer Scientist. Be helpful and professional."
@@ -90,9 +97,6 @@ export default function Chatbot() {
         chunks.forEach((chunk: any) => {
           if (chunk.web?.uri) {
             groundingUrls.push({ title: chunk.web.title || chunk.web.uri, uri: chunk.web.uri });
-          }
-          if (chunk.maps?.uri) {
-            groundingUrls.push({ title: chunk.maps.title || 'Google Maps Link', uri: chunk.maps.uri });
           }
         });
       }
