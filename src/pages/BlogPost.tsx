@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User, ChevronLeft, ChevronRight, Share2 } from 'lucide-react';
 import { BLOG_POSTS } from '../constants';
-import Logo from '../components/Logo';
 
 export default function BlogPost() {
   const { id } = useParams<{ id: string }>();
@@ -50,11 +49,6 @@ export default function BlogPost() {
       </div>
 
       <div className="max-w-4xl mx-auto px-6 py-12 md:py-20">
-        <div className="mb-12">
-          <Link to="/">
-            <Logo size={40} />
-          </Link>
-        </div>
         <Link to="/blog" className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:underline mb-12 font-medium">
           <ArrowLeft size={20} />
           Back to Blog

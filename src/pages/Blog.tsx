@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, BookOpen, Calendar, Clock, ChevronRight, Search } from 'lucide-react';
 import { BLOG_POSTS } from '../constants';
-import Logo from '../components/Logo';
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,11 +29,6 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-20">
-        <div className="mb-12">
-          <Link to="/">
-            <Logo size={40} />
-          </Link>
-        </div>
         <Link to="/" className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:underline mb-8 font-medium">
           <ArrowLeft size={20} />
           Back to Home
