@@ -299,14 +299,11 @@ export default function Home() {
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all hover:-translate-y-1" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/bernard-fiagbenu-26b50b19a/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all hover:-translate-y-1" aria-label="LinkedIn">
               <Linkedin size={20} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-all hover:-translate-y-1" aria-label="GitHub">
+            <a href="https://github.com/bernardfiagbenu" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-all hover:-translate-y-1" aria-label="GitHub">
               <Github size={20} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 rounded-2xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-blue-900/40 hover:text-blue-500 dark:hover:text-blue-400 transition-all hover:-translate-y-1" aria-label="Twitter">
-              <Twitter size={20} />
             </a>
           </div>
         </footer>
