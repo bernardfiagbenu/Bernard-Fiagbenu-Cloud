@@ -5,10 +5,21 @@ import { BLOG_POSTS } from '../constants';
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setIsSubscribed(true);
+      setEmail('');
+      // In a real app, you'd send this to a backend
+    }
+  };
 
   const filteredPosts = BLOG_POSTS.filter(post => 
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -109,19 +120,31 @@ export default function Blog() {
 
         <div className="mt-20 p-8 md:p-12 bg-indigo-600 rounded-[2.5rem] text-white relative overflow-hidden">
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to the Newsletter</h2>
-            <p className="text-indigo-100 mb-8">Get the latest insights on cloud computing and AI delivered straight to your inbox.</p>
-            
-            <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-indigo-200 outline-none focus:bg-white/20 transition-all"
-              />
-              <button className="px-8 py-3.5 bg-white text-indigo-600 font-bold rounded-2xl hover:bg-indigo-50 transition-colors">
-                Subscribe
-              </button>
-            </form>
+            {isSubscribed ? (
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">You're on the list! 🎉</h2>
+                <p className="text-indigo-100 mb-0">Thanks for subscribing. We'll be in touch with the latest updates soon.</p>
+              </div>
+            ) : (
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Subscribe to the Newsletter</h2>
+                <p className="text-indigo-100 mb-8">Get the latest insights on cloud computing and AI delivered straight to your inbox.</p>
+                
+                <form className="flex flex-col sm:flex-row gap-3" onSubmit={handleSubscribe}>
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="flex-1 px-6 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder:text-indigo-200 outline-none focus:bg-white/20 transition-all"
+                  />
+                  <button type="submit" className="px-8 py-3.5 bg-white text-indigo-600 font-bold rounded-2xl hover:bg-indigo-50 transition-colors">
+                    Subscribe
+                  </button>
+                </form>
+              </>
+            )}
           </div>
           
           {/* Decorative background elements */}
