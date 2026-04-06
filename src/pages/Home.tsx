@@ -4,11 +4,20 @@ import {
   Moon,
   Github,
   Linkedin,
-  Twitter
+  Twitter,
+  Briefcase,
+  Building2,
+  GraduationCap,
+  Beaker,
+  BookOpen,
+  Search,
+  Lightbulb,
+  Rocket,
+  Cpu,
+  Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Chatbot from '../components/Chatbot';
-import Logo from '../components/Logo';
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false);
@@ -93,9 +102,6 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto relative z-10 p-6 md:p-12 lg:p-16">
         <header className="mb-6 md:mb-10 pt-8 md:pt-12">
-          <div className="mb-8 md:mb-12">
-            <Logo size={60} />
-          </div>
           <h1 className="flex flex-col gap-2 md:gap-4">
             <span className="text-7xl md:text-8xl lg:text-[10rem] font-black text-gray-900 dark:text-white tracking-tighter leading-none transition-colors duration-500">
               Welcome.
@@ -126,15 +132,7 @@ export default function Home() {
               className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px] group/card"
             >
               <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-0.5s' }}>
-                <img 
-                  src="/images/portfolio.jpg" 
-                  alt="Portfolio" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/portfolio/200/200';
-                  }} 
-                />
+                <Briefcase size={48} className="text-indigo-600" />
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3 transition-colors">My Works</h3>
@@ -142,28 +140,20 @@ export default function Home() {
               </div>
             </a>
 
-            {/* 2. Apps (Swapped from Business) */}
+            {/* 2. Business */}
             <a 
-              href="https://apps.bernardfiagbenu.cloud" 
+              href="https://business.bernardfiagbenu.cloud" 
               target="_blank" 
               rel="noopener noreferrer"
-              id="apps" 
-              className="col-span-1 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px] group/card"
+              id="business" 
+              className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px] group/card"
             >
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-3.1s' }}>
-                <img 
-                  src="/images/software%20tools.jpg" 
-                  alt="Software Tools" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/tools/200/200';
-                  }} 
-                />
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-1.2s' }}>
+                <Building2 size={40} className="text-pink-600" />
               </div>
               <div className="mt-8">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Software Tools</h3>
-                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Apps</p>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Corporate Activities</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Business</p>
               </div>
             </a>
 
@@ -176,15 +166,7 @@ export default function Home() {
               className="col-span-1 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px] group/card"
             >
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-3.5s' }}>
-                <img 
-                  src="/images/develop%20skills%20training.jpg" 
-                  alt="Training" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/training/200/200';
-                  }} 
-                />
+                <GraduationCap size={40} className="text-blue-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Develop Your Skills</h3>
@@ -201,15 +183,7 @@ export default function Home() {
               className="col-span-1 lg:row-span-2 bg-[#D6FFEB] dark:bg-emerald-900/20 dark:border dark:border-emerald-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-emerald-500/20 cursor-pointer min-h-[240px] group/card"
             >
               <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-2.1s' }}>
-                <img 
-                  src="/images/lab.jpg" 
-                  alt="Lab" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/lab/200/200';
-                  }} 
-                />
+                <Beaker size={48} className="text-emerald-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Track Innovation</h3>
@@ -217,28 +191,20 @@ export default function Home() {
               </div>
             </a>
 
-            {/* 5. Artificial Intelligence (Renamed from Academy) */}
+            {/* 5. Academy */}
             <a 
               href="https://academy.bernardfiagbenu.cloud" 
               target="_blank" 
               rel="noopener noreferrer"
-              id="ai" 
+              id="academy" 
               className="col-span-1 bg-[#FFE8D6] dark:bg-orange-900/20 dark:border dark:border-orange-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-orange-500/20 cursor-pointer min-h-[200px] group/card"
             >
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-4.8s' }}>
-                <img 
-                  src="/images/academy.jpg" 
-                  alt="Artificial Intelligence" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/ai/200/200';
-                  }} 
-                />
+                <BookOpen size={40} className="text-amber-600" />
               </div>
               <div className="mt-8">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Artificial Intelligence</h3>
-                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">AI Research</p>
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Structured Learning</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Academy</p>
               </div>
             </a>
 
@@ -251,15 +217,7 @@ export default function Home() {
               className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px] group/card"
             >
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-0.8s' }}>
-                <img 
-                  src="/images/research.jpg" 
-                  alt="Research" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/research/200/200';
-                  }} 
-                />
+                <Search size={40} className="text-blue-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Research & Findings</h3>
@@ -276,15 +234,7 @@ export default function Home() {
               className="col-span-1 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px] group/card"
             >
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-5.5s' }}>
-                <img 
-                  src="/images/consulting.jpg" 
-                  alt="Consulting" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/consulting/200/200';
-                  }} 
-                />
+                <Lightbulb size={40} className="text-pink-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Consulting & Offers</h3>
@@ -301,15 +251,7 @@ export default function Home() {
               className="col-span-1 lg:row-span-2 bg-[#E6E2FF] dark:bg-indigo-900/20 dark:border dark:border-indigo-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-indigo-500/20 cursor-pointer min-h-[240px] group/card"
             >
               <div className="w-24 h-24 md:w-28 md:h-28 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-1.9s' }}>
-                <img 
-                  src="/images/project.jpg" 
-                  alt="Projects" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/project/200/200';
-                  }} 
-                />
+                <Rocket size={48} className="text-indigo-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Active Initiatives</h3>
@@ -317,28 +259,20 @@ export default function Home() {
               </div>
             </a>
 
-            {/* 9. Business (Swapped from Apps) */}
+            {/* 9. Apps */}
             <a 
-              href="https://business.bernardfiagbenu.cloud" 
+              href="https://apps.bernardfiagbenu.cloud" 
               target="_blank" 
               rel="noopener noreferrer"
-              id="business" 
-              className="col-span-1 md:col-span-2 lg:col-span-2 bg-[#FFE2EC] dark:bg-pink-900/20 dark:border dark:border-pink-800/30 p-6 md:p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer min-h-[200px] group/card"
+              id="apps" 
+              className="col-span-1 md:col-span-2 lg:col-span-2 bg-[#FFF8D6] dark:bg-yellow-900/20 dark:border dark:border-yellow-800/30 p-6 md:p-8 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/20 cursor-pointer min-h-[200px] group/card"
             >
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-1.2s' }}>
-                <img 
-                  src="/images/business.jpg" 
-                  alt="Business" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/business/200/200';
-                  }} 
-                />
+              <div className="w-28 h-28 md:w-32 md:h-32 rounded-3xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-3.1s' }}>
+                <Cpu size={56} className="text-yellow-600" />
               </div>
               <div className="mt-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Corporate Activities</h3>
-                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Business</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors">Software Tools</h3>
+                <p className="text-gray-700 dark:text-gray-300 font-medium transition-colors">Apps</p>
               </div>
             </a>
 
@@ -351,15 +285,7 @@ export default function Home() {
               className="col-span-1 bg-[#D6EFFF] dark:bg-blue-900/20 dark:border dark:border-blue-800/30 p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.03] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer min-h-[200px] group/card"
             >
               <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden bg-white/60 dark:bg-white/90 shadow-sm flex items-center justify-center p-2 floating group-hover/card:scale-110 transition-transform" style={{ animationDelay: '-6.2s' }}>
-                <img 
-                  src="/images/community.jpg" 
-                  alt="Community" 
-                  className="w-full h-full object-contain" 
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    e.currentTarget.src = 'https://picsum.photos/seed/community/200/200';
-                  }} 
-                />
+                <Users size={40} className="text-blue-600" />
               </div>
               <div className="mt-8">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 transition-colors">Connect & Network</h3>
@@ -372,9 +298,6 @@ export default function Home() {
         
         {/* Footer with Legal Links */}
         <footer className="mt-20 border-t border-gray-200 dark:border-gray-800 pt-8 pb-12 flex flex-col items-center gap-8 transition-colors duration-500">
-          <div className="mb-4">
-            <Logo size={30} />
-          </div>
           <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 text-sm text-gray-500 dark:text-gray-400">
             <p>&copy; {new Date().getFullYear()} BERNARD FIAGBENU. All rights reserved.</p>
             <div className="flex items-center gap-6">
