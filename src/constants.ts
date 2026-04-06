@@ -27,7 +27,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'April 5, 2026',
     readTime: '8 min read',
     category: 'Cloud Computing',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
+    image: 'https://picsum.photos/seed/cloud/800/450',
     author: 'Bernard Fiagbenu'
   },
   {
@@ -45,7 +45,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'March 28, 2026',
     readTime: '12 min read',
     category: 'Artificial Intelligence',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+    image: 'https://picsum.photos/seed/ai/800/450',
     author: 'Bernard Fiagbenu'
   },
   {
@@ -63,7 +63,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'March 15, 2026',
     readTime: '15 min read',
     category: 'Software Engineering',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800',
+    image: 'https://picsum.photos/seed/software/800/450',
     author: 'Bernard Fiagbenu'
   }
 ];
