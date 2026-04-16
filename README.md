@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Portfolio Pro - Bernard Fiagbenu
 
-# Run and deploy your AI Studio app
+A modern portfolio website built with Next.js, featuring projects, research, and an AI chatbot.
 
-This contains everything you need to run your app locally.
+## Getting Started
 
-View your app in AI Studio: https://ai.studio/apps/a0cbde9e-5f35-4a9e-97b5-78e3e79e1a5f
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
+## Deploy to Hostinger via GitHub
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Push your code to a GitHub repository.
+2. In Hostinger, go to your Node.js hosting or VPS dashboard.
+3. Connect your GitHub repository.
+4. Set the build command to `npm run build`.
+5. Set the start command to `npm start` (which runs `node server.js`).
+6. Add your environment variables (e.g., `GEMINI_API_KEY`, `NEXT_PUBLIC_SITE_URL`).
