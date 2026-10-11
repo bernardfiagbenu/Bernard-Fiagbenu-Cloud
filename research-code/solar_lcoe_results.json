@@ -1,0 +1,236 @@
+{
+  "3.0kWp": {
+    "discount_8pct": {
+      "LCOE_USD_per_kWh": 0.074,
+      "Discounted_Lifetime_Energy_kWh": 44994.6,
+      "Discounted_Lifetime_Costs_USD": 3328.2,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -1303.44,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 1261.25,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 3061.04,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_10pct": {
+      "LCOE_USD_per_kWh": 0.0833,
+      "Discounted_Lifetime_Energy_kWh": 38405.8,
+      "Discounted_Lifetime_Costs_USD": 3197.44,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -1469.18,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 719.95,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 2256.19,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_12pct": {
+      "LCOE_USD_per_kWh": 0.093,
+      "Discounted_Lifetime_Energy_kWh": 33298.0,
+      "Discounted_Lifetime_Costs_USD": 3095.45,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -1597.04,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 300.95,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 1632.87,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_15pct": {
+      "LCOE_USD_per_kWh": 0.1082,
+      "Discounted_Lifetime_Energy_kWh": 27564.0,
+      "Discounted_Lifetime_Costs_USD": 2981.07,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -1740.69,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": -169.54,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 933.02,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    }
+  },
+  "5.0kWp": {
+    "discount_8pct": {
+      "LCOE_USD_per_kWh": 0.074,
+      "Discounted_Lifetime_Energy_kWh": 74991.1,
+      "Discounted_Lifetime_Costs_USD": 5547.0,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -2172.4,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 2102.09,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 5101.73,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_10pct": {
+      "LCOE_USD_per_kWh": 0.0833,
+      "Discounted_Lifetime_Energy_kWh": 64009.7,
+      "Discounted_Lifetime_Costs_USD": 5329.07,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -2448.63,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 1199.92,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 3760.31,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_12pct": {
+      "LCOE_USD_per_kWh": 0.093,
+      "Discounted_Lifetime_Energy_kWh": 55496.7,
+      "Discounted_Lifetime_Costs_USD": 5159.08,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -2661.73,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 501.58,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 2721.45,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_15pct": {
+      "LCOE_USD_per_kWh": 0.1082,
+      "Discounted_Lifetime_Energy_kWh": 45940.0,
+      "Discounted_Lifetime_Costs_USD": 4968.45,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -2901.14,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": -282.56,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 1555.04,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    }
+  },
+  "10.0kWp": {
+    "discount_8pct": {
+      "LCOE_USD_per_kWh": 0.074,
+      "Discounted_Lifetime_Energy_kWh": 149982.2,
+      "Discounted_Lifetime_Costs_USD": 11094.0,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -4344.8,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 4204.18,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 10203.46,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_10pct": {
+      "LCOE_USD_per_kWh": 0.0833,
+      "Discounted_Lifetime_Energy_kWh": 128019.4,
+      "Discounted_Lifetime_Costs_USD": 10658.13,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -4897.26,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 2399.84,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 7520.62,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_12pct": {
+      "LCOE_USD_per_kWh": 0.093,
+      "Discounted_Lifetime_Energy_kWh": 110993.3,
+      "Discounted_Lifetime_Costs_USD": 10318.16,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -5323.46,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": 1003.16,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 5442.9,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    },
+    "discount_15pct": {
+      "LCOE_USD_per_kWh": 0.1082,
+      "Discounted_Lifetime_Energy_kWh": 91880.0,
+      "Discounted_Lifetime_Costs_USD": 9936.89,
+      "Tariff_Analysis": {
+        "Subsidized_Band": {
+          "NPV_USD": -5802.29,
+          "Simple_Payback_Yrs": 24
+        },
+        "Middle_Residential": {
+          "NPV_USD": -565.13,
+          "Simple_Payback_Yrs": 7
+        },
+        "High_Consumption": {
+          "NPV_USD": 3110.07,
+          "Simple_Payback_Yrs": 5
+        }
+      }
+    }
+  }
+}
