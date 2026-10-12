@@ -226,7 +226,7 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-4 text-[13px] pt-1">
+                <div className="flex items-center gap-3 text-[13px] pt-1">
                   <Link
                     href={`/research/${paper.slug}`}
                     className="text-[var(--text)] font-medium"
@@ -241,6 +241,14 @@ export default function HomePage() {
                   >
                     PDF
                   </a>
+                  <span className="text-[var(--text-subtle)]">/</span>
+                  <Link
+                    href={`/research/${paper.slug}#theory-to-solution`}
+                    className="text-[var(--text-muted)] hover:text-[var(--text)] font-mono text-[12px]"
+                    title="View open-source runnable prototype"
+                  >
+                    Prototype
+                  </Link>
                 </div>
               </article>
             ))}

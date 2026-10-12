@@ -69,20 +69,28 @@ export default function ResearchIndexPage() {
                   {paper.abstract.background} {paper.abstract.objective}
                 </p>
 
-                <div className="flex items-center gap-4 text-[13px] pt-1">
+                <div className="flex items-center gap-3 text-[13px] pt-1">
                   <Link
                     href={`/research/${paper.slug}`}
                     className="font-medium hover:text-[var(--text)]"
                   >
                     Read online &rarr;
                   </Link>
+                  <span className="text-[var(--text-subtle)]">/</span>
                   <a
                     href={paper.pdfUrl}
                     download={`${paper.slug}.pdf`}
                     className="text-[var(--text-muted)] hover:text-[var(--text)]"
                   >
-                    Download PDF
+                    PDF
                   </a>
+                  <span className="text-[var(--text-subtle)]">/</span>
+                  <Link
+                    href={`/research/${paper.slug}#theory-to-solution`}
+                    className="text-[var(--text-muted)] hover:text-[var(--text)] font-mono text-[12px]"
+                  >
+                    Prototype
+                  </Link>
                 </div>
               </article>
             ))}
