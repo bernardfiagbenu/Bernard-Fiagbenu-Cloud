@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you reference this portfolio or working papers, please cite as below."
+authors:
+  - family-names: Fiagbenu
+    given-names: Bernard
+    orcid: "https://orcid.org/"
+title: "Academic Research Portfolio: Applied Computing, Telecommunications, and Energy Systems in Ghana"
+version: 1.0.0
+date-released: 2026-10-11
+url: "https://bernardfiagbenu.vercel.app/"
+repository-code: "https://github.com/bernardfiagbenu/Bernard-Fiagbenu-Cloud"
+keywords:
+  - "Computer Science"
+  - "Optimization Metaheuristics"
+  - "Phased Array Antennas"
+  - "Educational Technology"
+  - "Port Logistics Blockchain"
+  - "Solar Photovoltaic LCOE"
+  - "Ghana"
+license: MIT

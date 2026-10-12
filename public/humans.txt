@@ -1,0 +1,12 @@
+/* TEAM */
+Name: BERNARD FIAGBENU
+Title: Computer Scientist
+Location: Accra, Ghana
+GitHub: https://github.com/bernardfiagbenu
+LinkedIn: https://www.linkedin.com/in/bernard-fiagbenu-26b50b19a/
+
+/* SITE */
+Standards: HTML5, CSS3, Next.js 15, TypeScript, Web Animations API
+Typography: Inter / System Font, Monospace
+Design: Monochrome Minimalist
+Last update: October 2026

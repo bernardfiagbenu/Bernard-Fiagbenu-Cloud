@@ -2,12 +2,12 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Bernard Fiagbenu',
-    short_name: 'Bernard Fiagbenu',
-    description: 'Computer Scientist based in Ghana.',
+    name: 'BERNARD FIAGBENU',
+    short_name: 'Bernard',
+    description: 'Academic portfolio and research papers of Bernard Fiagbenu, Computer Scientist in Ghana.',
     start_url: '/',
-    display: 'minimal-ui',
-    background_color: '#ffffff',
+    display: 'standalone',
+    background_color: '#000000',
     theme_color: '#000000',
     icons: [
       {

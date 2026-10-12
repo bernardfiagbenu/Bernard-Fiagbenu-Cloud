@@ -1,0 +1,40 @@
+# BERNARD FIAGBENU
+
+> Computer Scientist based in Accra, Ghana.
+> Website: https://bernardfiagbenu.vercel.app/
+
+## About
+Bernard Fiagbenu is a computer scientist working on artificial intelligence, telecommunications, educational technology, supply chain and energy systems, with a focus on applications in Ghana.
+
+## Academic Research Areas & Working Papers
+1. Artificial Intelligence & Computing
+   - Title: A Reproducible Comparative Analysis of Particle Swarm Optimization, Grey Wolf Optimizer, and Differential Evolution on Classical Benchmark Functions
+   - URL: https://bernardfiagbenu.vercel.app/research/ai-computing
+   - PDF: https://bernardfiagbenu.vercel.app/papers/ai-computing.pdf
+
+2. Telecommunications & Engineering
+   - Title: Performance Evaluation of Linear and Phased Array Antennas: Impact of Element Spacing and Scan Angle on Sidelobe Suppression
+   - URL: https://bernardfiagbenu.vercel.app/research/telecommunications
+   - PDF: https://bernardfiagbenu.vercel.app/papers/telecommunications.pdf
+
+3. Educational Technology & E-Learning
+   - Title: A Structural Equation Modeling Framework for Blended Learning and Immersive Technology Adoption in Ghanaian Higher Education: A Registered Report Proposal
+   - URL: https://bernardfiagbenu.vercel.app/research/edtech
+   - PDF: https://bernardfiagbenu.vercel.app/papers/edtech.pdf
+
+4. Supply Chain, Blockchain & Business
+   - Title: Blockchain Readiness and Maturity Framework for Port Logistics: A Design-Science Approach for Tema and Takoradi Ports
+   - URL: https://bernardfiagbenu.vercel.app/research/supply-chain
+   - PDF: https://bernardfiagbenu.vercel.app/papers/supply-chain.pdf
+
+5. Energy & Sustainability
+   - Title: Techno-Economic Analysis and Sensitivity Study of Residential Solar Photovoltaic Systems in Accra, Ghana
+   - URL: https://bernardfiagbenu.vercel.app/research/energy
+   - PDF: https://bernardfiagbenu.vercel.app/papers/energy.pdf
+
+## Selected Projects
+- China Xpress: Full-stack logistics web application for China-Ghana package tracking. Live URL: https://shipingtracker.vercel.app/
+
+## Contact & Profiles
+- GitHub: https://github.com/bernardfiagbenu
+- LinkedIn: https://www.linkedin.com/in/bernard-fiagbenu-26b50b19a/

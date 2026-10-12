@@ -1,15 +1,15 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/lib/seo';
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = 'https://bernardfiagbenu.ai';
-
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/api/'],
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
